@@ -49,3 +49,10 @@
 {{- $source := $cdn.animateCSS | default "lib/animate/animate.min.css" -}}
 {{- $style := dict "Source" $source "Fingerprint" $fingerprint -}}
 {{- partial "plugin/style.html" $style -}}
+
+{{- /* custom css */ -}}
+{{- with .Site.Params.custom.css -}}
+    {{- $source := . -}}
+    {{- $style := dict "Source" $source "Fingerprint" $fingerprint -}}
+    {{- partial "plugin/style.html" $style -}}
+{{- end -}}
