@@ -11,15 +11,15 @@ $global-line-height: 1.5rem;
 
 // Color of the background
 $global-background-color: #fff !default;
-$global-background-color-dark: #292a2d !default;
+$global-background-color-dark: #1e1e1e !default;
 
 // Color of the text
-$global-font-color: #161209 !default;
-$global-font-color-dark: #a9a9b3 !default;
+$global-font-color: #000 !default;
+$global-font-color-dark: #ccc !default;
 
 // Color of the secondary text
-$global-font-secondary-color: #a9a9b3 !default;
-$global-font-secondary-color-dark: #5d5d5f !default;
+$global-font-secondary-color: #888 !default;
+$global-font-secondary-color-dark: #8b8b8b !default;
 
 // Color of the link
 $global-link-color: #161209 !default;
@@ -27,11 +27,11 @@ $global-link-color-dark: #a9a9b3 !default;
 
 // Color of the hover link
 $global-link-hover-color: #2d96bd !default;
-$global-link-hover-color-dark: #fff !default;
+$global-link-hover-color-dark: #f0f6fc !default;
 
 // Color of the border
-$global-border-color: #f0f0f0 !default;
-$global-border-color-dark: #363636 !default;
+$global-border-color: #aaa !default;
+$global-border-color-dark: #555 !default;
 // ========== Global ========== //
 
 // ========== Scrollbar ========== //
@@ -53,8 +53,8 @@ $selection-color-dark: rgba(50, 112, 194, 0.4) !default;
 $header-height: 3.5rem !default;
 
 // Color of the header background
-$header-background-color: #f8f8f8 !default;
-$header-background-color-dark: #252627 !default;
+$header-background-color: #f8f8f8bb !default;
+$header-background-color-dark: #282828bb !default;
 
 // Font style of the header title
 $header-title-font-family: $global-font-family !default;
