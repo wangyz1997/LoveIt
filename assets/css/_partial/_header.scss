@@ -4,6 +4,9 @@ header {
   background-color: $header-background-color;
   @include transition(box-shadow 0.3s ease);
 
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+
   [theme=dark] & {
     background-color: $header-background-color-dark;
   }
