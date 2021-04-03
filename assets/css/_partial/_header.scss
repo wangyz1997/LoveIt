@@ -216,7 +216,6 @@ header {
 #header-mobile {
   display: none;
   position: fixed;
-  height: $header-height;
   line-height: $header-height;
 
   [header-mobile=normal] & {
