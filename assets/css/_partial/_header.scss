@@ -3,9 +3,7 @@ header {
   z-index: 150;
   background-color: $header-background-color;
   @include transition(box-shadow 0.3s ease);
-
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-  backdrop-filter: saturate(180%) blur(20px);
+  @include backdrop-filter(saturate(180%) blur(20px));
 
   [theme=dark] & {
     background-color: $header-background-color-dark;
@@ -280,7 +278,7 @@ header {
 
     .menu {
       text-align: center;
-      background: $header-background-color;
+      background: transparent;
       border-top: 2px solid $global-border-color;
       display: none;
       padding-top: .5rem;
@@ -322,7 +320,6 @@ header {
       }
 
       [theme=dark] & {
-        background: $header-background-color-dark;
         border-top-color: $global-border-color-dark;
       }
     }

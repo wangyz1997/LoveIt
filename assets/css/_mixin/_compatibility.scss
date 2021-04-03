@@ -31,6 +31,13 @@
   filter: $value;
 }
 
+@mixin backdrop-filter($value) {
+  -webkit-backdrop-filter: $value;
+  -moz-backdrop-filter: $value;
+  -ms-backdrop-filter: $value;
+  backdrop-filter: $value;
+}
+
 @mixin flex($value) {
   -webkit-flex: $value;
   flex: $value;
