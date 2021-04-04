@@ -12,8 +12,13 @@ other = "查看评论"
 
 # === Post ===
 [posts]
-other = "文章"
+other = "技术文章"
 # === Post ===
+
+# === Essay ===
+[essays]
+other = "随笔"
+# === Essay ===
 
 # === Taxonomy ===
 [allSome]
