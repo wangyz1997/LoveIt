@@ -76,6 +76,15 @@
                         </span>
                     </span>
                 {{- end -}}
+                {{- range .Site.Menus.aux -}}
+                    {{- $url := .URL | relLangURL -}}
+                    {{- with .Page -}}
+                        {{- $url = .RelPermalink -}}
+                    {{- end -}}
+                    <a class="menu-item{{ if $.IsMenuCurrent `aux` . | or ($.HasMenuCurrent `aux` .) | or (eq $.RelPermalink $url) }} active{{ end }}" href="{{ $url }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if (urls.Parse $url).Host }} rel="noopener noreffer" target="_blank"{{ end }}>
+                        {{- .Pre | safeHTML }} {{ .Name }} {{ .Post | safeHTML -}}
+                    </a>
+                {{- end -}}
                 <a href="javascript:void(0);" class="menu-item theme-switch" title="{{ T "switchTheme" }}">
                     <i class="fas fa-adjust fa-fw"></i>
                 </a>
@@ -144,6 +153,15 @@
                 {{- end -}}
                 <a class="menu-item" href="{{ $url }}" title="{{ .Title }}"{{ if (urls.Parse $url).Host }} rel="noopener noreffer" target="_blank"{{ end }}>
                     {{- .Pre | safeHTML }}{{ .Name }}{{ .Post | safeHTML -}}
+                </a>
+            {{- end -}}
+            {{- range .Site.Menus.aux -}}
+                {{- $url := .URL | relLangURL -}}
+                {{- with .Page -}}
+                    {{- $url = .RelPermalink -}}
+                {{- end -}}
+                <a class="menu-item{{ if $.IsMenuCurrent `aux` . | or ($.HasMenuCurrent `aux` .) | or (eq $.RelPermalink $url) }} active{{ end }}" href="{{ $url }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if (urls.Parse $url).Host }} rel="noopener noreffer" target="_blank"{{ end }}>
+                    {{- .Pre | safeHTML }} {{ .Name }} {{ .Post | safeHTML -}}
                 </a>
             {{- end -}}
             <a href="javascript:void(0);" class="menu-item theme-switch" title="{{ T "switchTheme" }}">
