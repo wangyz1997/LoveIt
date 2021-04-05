@@ -2,7 +2,7 @@
 
 .essay {
   font-size: 1.15em;
-  line-height: 1.5em;
+  line-height: 1.6em;
   letter-spacing: 0.05em;
   font-family: Noto Serif CJK SC, Noto Serif SC;
 
@@ -249,18 +249,10 @@
       margin: 1rem 0;
       color: $global-font-secondary-color;
       
-      p {
-        text-align: unset;
-      }
-
       [theme=dark] & {
         border-left-color: $global-border-color-dark;
         color: $global-font-secondary-color-dark;
       }
-    }
-    
-    p {
-      margin: .25rem 0;
     }
 
     .footnotes {
