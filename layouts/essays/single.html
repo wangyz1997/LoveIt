@@ -10,22 +10,18 @@
         {{- $toc = dict "enable" false -}}
     {{- end -}}
 
-    <article class="page single">
+    <article class="page essay">
         {{- /* Title */ -}}
-        <h1 class="single-title animated flipInX">{{ .Title }}</h1>
+        <h1 class="essay-title">{{ .Title }}</h1>
 
         {{- /* Meta */ -}}
-        <div class="post-meta">
-            <div class="post-meta-line">
+        <div class="essay-meta">
+            <div class="essay-meta-line">
                 {{- with .Site.Params.dateformat | default "2006-01-02" | .PublishDate.Format -}}
-                    <i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="{{ . }}">{{ . }}</time>&nbsp;
+                    <time datetime="{{ . }}">{{ . }}</time>&nbsp;&nbsp;
                 {{- end -}}
-                <i class="fas fa-pencil-alt fa-fw"></i>&nbsp;{{ T "wordCount" .WordCount }}&nbsp;
+                {{ T "wordCount" .WordCount }}
                 
-                {{- if .Site.Params.page.showReadTime -}}
-                    <i class="far fa-clock fa-fw"></i>&nbsp;{{ T "readingTime" .ReadingTime }}&nbsp;
-                {{- end -}}
-
                 {{- $comment := .Scratch.Get "comment" | default dict -}}
                 {{- if $comment.enable | and $comment.valine.enable | and $comment.valine.visitor -}}
                     <span id="{{ .RelPermalink }}" class="leancloud_visitors" data-flag-title="{{ .Title }}">
@@ -40,6 +36,7 @@
             {{- dict "Content" .Content "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
         </div>
 
+        {{- /* Next and prev buttons */ -}}
         <div class="post-footer" id="post-footer">
             <div class="post-nav">
                 {{- if .PrevInSection -}}
