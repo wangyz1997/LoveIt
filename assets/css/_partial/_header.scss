@@ -75,13 +75,9 @@ header {
     @include border-radius(.5rem);
     border: none;
     outline: none;
-    background-color: $header-background-color;
+    background-color: transparent;
     vertical-align: baseline !important;
     @include transition(width 0.3s ease);
-
-    [theme=dark] & {
-      background-color: $header-background-color-dark;
-    }
   }
 
   @include placeholder(transparent);
