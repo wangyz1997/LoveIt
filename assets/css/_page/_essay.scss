@@ -279,13 +279,20 @@
     @import "../_partial/_single/bilibili";
 
     hr {
-      margin: 1rem 0;
-      position: relative;
-      border-top: 1px dashed $global-border-color;
-      border-bottom: none;
+      margin: 1em 0;
+      border: 0;
+      height: auto;
+    }
+
+    hr::before {
+      content: "* * *";
+      text-align: center;
+      display: block;
+      font-size: 1.2em;
+      color: $global-font-secondary-color;
 
       [theme=dark] & {
-        border-top: 1px dashed $global-border-color-dark;
+        color: $global-font-secondary-color-dark;
       }
     }
 
