@@ -1,10 +1,9 @@
 @import "../_partial/_single/toc";
 
 .essay {
-  font-size: 1.15em;
-  line-height: 1.6em;
-  letter-spacing: 0.05em;
-  font-family: Noto Serif CJK SC, Noto Serif SC;
+  font-size: 1.1em;
+  line-height: 1.5em;
+  font-family: Source Hans Serif, Noto Serif CJK SC, Noto Serif SC, serif;
 
   .essay-title {
     margin: 1rem 0 .5rem;
@@ -146,9 +145,13 @@
 
     ul, ol {
       margin: .5rem 0;
-      padding-left: 2.5rem;
+      padding-left: 2rem;
     }
 
+    li {
+      margin: .5rem 0;
+    }
+  
     ul {
       list-style-type: disc;
     }
