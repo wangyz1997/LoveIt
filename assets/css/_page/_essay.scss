@@ -2,7 +2,8 @@
 
 .essay {
   font-size: 1.1em;
-  line-height: 1.5em;
+  letter-spacing: 0.5px;
+  line-height: 1.6em;
   font-family: Noto Serif CJK SC, Noto Serif SC, Source Hans Serif, serif;
 
   .essay-title {
@@ -150,6 +151,7 @@
 
     li {
       margin: .5rem 0;
+      text-align: justify;
     }
   
     ul {
